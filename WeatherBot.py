@@ -4,7 +4,7 @@ import telebot
 from pyowm.owm import OWM
 from pyowm.utils.config import get_default_config
 config_dict = get_default_config()
-config_dict['language'] = 'ru'
+config_dict['language'] = 'uk'
 owm = OWM('dfc8f65597d21cfb5dd4409621bb31f6', config_dict)
 mgr = owm.weather_manager()
 bot = telebot.TeleBot("1424640295:AAGK-eTOjFaEsSSBYinGYW50uh2E7m8-Ugw")
@@ -15,15 +15,15 @@ def send_echo(message):
     w = observation.weather
     temp = w.temperature('celsius')['temp']
 
-    answer = 'В городе ' + message.text + ' сейчас ' + w.detailed_status + '\n'
-    answer += 'Температура сейчас в районе ' + str(temp) + ' градуса' + '\n\n'
+    answer = 'У місті ' + message.text + ' зараз ' + w.detailed_status + '\n'
+    answer += 'Температура зараз приблизно в районі десь ' + str(temp) + ' градусів' + '\n\n'
 
     if temp < 10:
-        answer += 'Сейчас ппц как холодно, одевайся как танк!'
+        answer += 'Холодрига на вулиці, краще не виходити сьогодні взагалі'
     elif temp < 20:
-        answer += 'Сейчас холодно, оденься потеплее'
+        answer += 'Холодно на вулиці, одягай щось тепле'
     else:
-        answer += 'Температура норм, одевай что угодно'
+        answer += 'Норм, одягай що хочеш'
 
     bot.send_message(message.chat.id, answer)
 
