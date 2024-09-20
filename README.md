@@ -1,2 +1,2 @@
-# WeatherTelegramBot
-P.S Код дуже старий, я взагалі не знаю, чи працює він зараз.
+# Weather Telegram Bot
+ 
