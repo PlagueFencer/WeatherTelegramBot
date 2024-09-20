@@ -5,7 +5,7 @@ from pyowm.owm import OWM
 from pyowm.utils.config import get_default_config
 config_dict = get_default_config()
 config_dict['language'] = 'en'
-owm = OWM('', config_dict)
+owm = OWM('dfc8f65597d21cfb5dd4409621bb31f6', config_dict)
 mgr = owm.weather_manager()
 bot = telebot.TeleBot("")
 
