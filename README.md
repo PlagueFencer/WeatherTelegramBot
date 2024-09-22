@@ -13,4 +13,4 @@ It is just a simple Telegram bot that displays information about the weather in 
 9. Now, open a conversation with your Bot, and just type any city name intel about what you want. 
 
 P.S
-Actually, I don't know if this even works this code is 4 years old :) 
+Actually, I don't know if this even works this code is 4 yo :) 
